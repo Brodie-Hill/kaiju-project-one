@@ -1,21 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] DialogBox quitConfirmationBox = null;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
     public void TryQuit()
     {
@@ -24,5 +15,10 @@ public class MainMenu : MonoBehaviour
     public void ConfirmQuit()
     {
         Application.Quit();
+    }
+
+    public void LoadPrototypeScene()
+    {
+        SceneManager.LoadScene(1);
     }
 }
